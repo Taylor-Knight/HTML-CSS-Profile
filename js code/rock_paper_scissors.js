@@ -58,7 +58,7 @@ const getUserChoice = (userInput) => {
   };
   
   const playGame = () => {
-    const userChoice = getUserChoice("bomb");
+    const userChoice = getUserChoice("rock");
     const computerChoice = getComputerChoice();
     console.log("You threw " + userChoice);
     console.log("The Computer threw " + computerChoice);
