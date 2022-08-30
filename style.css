@@ -1,0 +1,47 @@
+img {
+    height: auto; 
+    width: auto; 
+    max-width: 400px; 
+    max-height: 400px;
+    border-width: 2px;
+    border-style: groove;
+    border-color: blue;
+}
+
+.card {
+    max-width: auto;
+    margin: 3%;
+
+}
+
+.row {
+    display: flex;
+    flex:1 0 auto;
+}
+
+#bio{
+    Padding: 60px;
+}
+
+.container-fluid{
+    padding: 10px;
+    border-width: 2px;
+    border-style: groove;
+    border-color: blue;
+}
+
+body{
+    background-color:lightblue;
+    text-align: center;
+}
+
+.card-header{
+    text-decoration: underline;
+    font-family:fantasy;
+    font-size:20px
+}
+
+.card-body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
