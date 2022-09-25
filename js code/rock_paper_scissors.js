@@ -13,7 +13,7 @@ const getUserChoice = (userInput) => {
   };
   
   const getComputerChoice = () => {
-    var randomNumber = Math.floor(Math.random() * 3);
+    let randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
       case 0:
         return "rock";
@@ -62,7 +62,9 @@ const getUserChoice = (userInput) => {
     const computerChoice = getComputerChoice();
     console.log("You threw " + userChoice);
     console.log("The Computer threw " + computerChoice);
-    console.log(determineWinner(userChoice, computerChoice));
+    determineWinner(userChoice, computerChoice);
   };
   
-  console.log(playGame());
+  window.addEventListener('load', ()=>{
+    playGame();
+  })
