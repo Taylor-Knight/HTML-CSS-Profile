@@ -14,15 +14,10 @@ const getUserChoice = (userInput) => {
   
   const getComputerChoice = () => {
     let randomNumber = Math.floor(Math.random() * 3);
-    switch (randomNumber) {
-      case 0:
-        return "rock";
-      case 1:
-        return "paper";
-      case 2:
-        return "scissors";
-    }
+    let choices = ['rock', 'paper', 'scissors']
+    return choices[randomNumber]
   };
+    
   
   const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
@@ -35,6 +30,7 @@ const getUserChoice = (userInput) => {
           return console.log("User won!");
         }
       }
+      
       if (userChoice === "paper") {
         if (computerChoice === "scissors") {
           return console.log("Computer Won!");
@@ -58,13 +54,14 @@ const getUserChoice = (userInput) => {
   };
   
   const playGame = () => {
-    const userChoice = getUserChoice("rock");
+    const userInput = document.getElementById("game").value;
+    const userChoice = getUserChoice(userInput);
     const computerChoice = getComputerChoice();
     console.log("You threw " + userChoice);
     console.log("The Computer threw " + computerChoice);
     determineWinner(userChoice, computerChoice);
   };
   
-  window.addEventListener('load', ()=>{
-    playGame();
-  })
+  // window.addEventListener('load', ()=>{
+  //   playGame();
+  // })

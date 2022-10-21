@@ -17,7 +17,7 @@
     <script type="text/javascript"
         src="C:\Users\Taylor Knight\Documents\HomeworkHTML\js code\rock_paper_scissors.js"></script>
     <script type="text/javascript"
-        src="C:\Users\Taylor Knight\Documents\HomeworkHTML\js code\jscode.js"></script>
+        src="C:\Users\Taylor Knight\Documents\HomeworkHTML\js code\message.js"></script>
     <div class="container-fluid">
         <div class="card-deck row">
             <div class="card">
@@ -214,7 +214,7 @@
                     I have used stack overflow in creating this site, when I ran into issues with inserting my js code
                     into the body of this code which gave me a great understanding of using the style tag and type
                     attribute.
-                    I have set to first 2 secontions of this sir=te to display as 2 cards side by side but after writing
+                    I have set to first 2 sections of this site to display as 2 cards side by side but after writing
                     the code for this i found I may need something called bootstrap which I feel may be more leaning
                     towards CSS
                     Which I will leave for the moment as I know future sessions will be based of CSS.
@@ -226,7 +226,20 @@
                     random number that is assigned to a result.
                     As an addition to the standard game I added in the choice of 'bomb' which over rules all computer
                     choices and the play will always win.
+
+                    This is how the game initially worked, I changed it so that a user is able to choose 1 of the 4 
+                    options and when they submit this choice it runs the game, results are still printed in the console
+                    but I have added the element of user choice.
                 </p>
+                    <label for="game_input">Enter rock, paper, scissors or bomb:</label>
+                    <span><input type="text" id="game" name="game_input">
+                    <button type="button" onClick=playGame()>Click Me!</button></span>
+
+                <!-- <FORM NAME="game" ACTION="" METHOD="GET">
+                    rock, paper, scissors or bomb?: <BR>
+                    <INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+                    <INPUT TYPE="button" NAME="button" Value="Click" onClick=PlayGame()>
+                    </FORM> -->
             </div>
             <div class="card-footer"></div>
             </div>
