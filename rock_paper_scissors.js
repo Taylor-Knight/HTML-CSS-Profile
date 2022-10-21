@@ -23,34 +23,20 @@ const getUserChoice = (userInput) => {
     if (userChoice === computerChoice) {
       return console.log("It's a tie!");
     } else {
-      if (userChoice === "rock") {
-        if (computerChoice === "paper") {
-          return console.log("Computer Won!");
-        } else {
-          return console.log("User won!");
-        }
-      }
       
-      if (userChoice === "paper") {
-        if (computerChoice === "scissors") {
-          return console.log("Computer Won!");
-        } else {
-          return console.log("User won!");
-        }
-      }
-  
-      if (userChoice === "scissors") {
-        if (computerChoice === "rock") {
-          return console.log("Computer Won!");
-        } else {
-          return console.log("User won!");
-        }
-      }
-  
       if (userChoice === "bomb") {
         return console.log("User won!");
       }
-    }
+
+      if(((userChoice === "rock") && (computerChoice === "paper")) ||
+       ((userChoice === "paper") && (computerChoice === "scissors")) ||
+        ((userChoice === "scissors") && (computerChoice === "rock"))) {
+          return console.log("Computer Won!");
+        } else {
+          return console.log("User won!");
+        }
+      }
+    
   };
   
   const playGame = () => {
