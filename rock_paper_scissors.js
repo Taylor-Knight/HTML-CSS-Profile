@@ -21,32 +21,54 @@ const getUserChoice = (userInput) => {
   
   const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
-      return console.log("It's a tie!");
+      appendResult(" It's a tie!")
+      // return console.log("It's a tie!");
     } else {
       
       if (userChoice === "bomb") {
-        return console.log("User won!");
+        // return console.log("User won!");
+        appendResult(" User won!");
       }
 
-      if(((userChoice === "rock") && (computerChoice === "paper")) ||
-       ((userChoice === "paper") && (computerChoice === "scissors")) ||
-        ((userChoice === "scissors") && (computerChoice === "rock"))) {
-          return console.log("Computer Won!");
+
+      if(((computerChoice === "rock") && (userChoice === "paper")) ||
+       ((computerChoice === "paper") && (userChoice === "scissors")) ||
+        ((computerChoice === "scissors") && (userChoice === "rock"))) {
+          // return console.log("Computer Won!");
+          appendResult(" Computer Won!");
         } else {
-          return console.log("User won!");
+          
+          //return console.log(" User won!");
+          appendResult(" User won!");
         }
       }
-    
   };
   
   const playGame = () => {
     const userInput = document.getElementById("game").value;
     const userChoice = getUserChoice(userInput);
     const computerChoice = getComputerChoice();
-    console.log("You threw " + userChoice);
-    console.log("The Computer threw " + computerChoice);
+
+    var game_result = document.getElementById('game_result');
+    // game_result.innerHTML('');
+
+    appendResult("You threw " + userChoice +". ")
+    appendResult("The Computer threw " + computerChoice +".")
+    // console.log("You threw " + userChoice);
+    // console.log("The Computer threw " + computerChoice);
     determineWinner(userChoice, computerChoice);
   };
+
+  const appendResult = (data) => {
+
+    var html = '';
+    html += data ;
+    var game_result = document.getElementById('game_result');
+    game_result.append(html);
+    
+  };
+
+// </script>
   
   // window.addEventListener('load', ()=>{
   //   playGame();
